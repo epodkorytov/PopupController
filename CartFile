@@ -1,0 +1,4 @@
+git "https://github.com/epodkorytov/ImageLoader.git"
+git "https://github.com/epodkorytov/Indicator.git"
+git "https://github.com/epodkorytov/Extensions.git"
+git "https://github.com/epodkorytov/OCTextInput.git"
