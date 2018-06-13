@@ -5,7 +5,7 @@
 
 import UIKit
 
-typealias OCButtonAction = () -> Void
+public typealias OCButtonAction = () -> Void
 
 public enum UIButtonAnswerType {
     case accept
@@ -38,7 +38,7 @@ public struct UIButtonType: UIButtonTypeProtocol {
     }
 }
 
-extension UIButton
+public extension UIButton
 {
     
     private struct AssociatedKeys
@@ -56,7 +56,7 @@ extension UIButton
         }
     }
     
-    var action: OCButtonAction? {
+    public var action: OCButtonAction? {
         set(newValue)
         {
             removeTarget(self, action: #selector(performAction), for: UIControlEvents.touchUpInside)
@@ -117,7 +117,7 @@ extension UIButton
     }
 }
 
-extension UIButton {
+public extension UIButton {
     
     convenience init(withStyle style: ButtonStyleProtocol) {
         self.init()
@@ -126,7 +126,7 @@ extension UIButton {
     }
     
     
-    func setStyle(_ style: ButtonStyleProtocol) {
+    public func setStyle(_ style: ButtonStyleProtocol) {
         backgroundColor = style.backgroundColor
         setTitleColor(style.textColor, for: .normal)
         titleLabel?.font = style.textFont
@@ -138,7 +138,7 @@ extension UIButton {
     }
     
     
-    func setTitleUnderlined(_ title: String?, for state: UIControlState, style: ButtonStyleProtocol) {
+    public func setTitleUnderlined(_ title: String?, for state: UIControlState, style: ButtonStyleProtocol) {
         if let titleStr = title {
             let attrs = [ NSAttributedStringKey.font : style.textFont,
                           NSAttributedStringKey.foregroundColor : style.textColor,
@@ -153,7 +153,7 @@ extension UIButton {
     }
     
     
-    func customizeButtonShape(forStyle style: ButtonStyleProtocol) {
+    public func customizeButtonShape(forStyle style: ButtonStyleProtocol) {
         switch style.type {
         case .primary, .secondary:
             layer.cornerRadius = style.cornerRadius
@@ -168,13 +168,13 @@ extension UIButton {
         }
     }
     
-    func showButtonActivity() {
+    public func showButtonActivity() {
         titleLabel?.alpha = 0.0
         showActivityIndicator()
     }
     
     
-    func hideButtonActivity() {
+    public func hideButtonActivity() {
         titleLabel?.alpha = 1.0
         hideActivityIndicator()
     }
