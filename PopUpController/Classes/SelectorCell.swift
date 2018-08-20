@@ -18,7 +18,7 @@ public class SelectorCell: UITableViewCell {
 
     //MARK: - Overriden methods
 
-    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
     }
@@ -53,15 +53,11 @@ public class SelectorCell: UITableViewCell {
                 accessoryType = .none
             }
         } else if let item = content as? DataSourceItem<URL> {
+            imageView?.image = style.placeholder ?? UIImage()
             if let url = item.value {
-                imageView?.image = style.placeholder ?? UIImage()
                 imageView?.image(stringOrURL: url,
                                  placeholderType: .activityIndicator(type: .infinit))
-            } else {
-                imageView?.image = style.placeholder
             }
-            
-
             
             if content.selected {
                 accessoryType = hideAccessory ? .none : .checkmark
@@ -84,7 +80,7 @@ public class SelectorCell: UITableViewCell {
             }
         }
         textLabel?.attributedText = NSAttributedString(string: content.title,
-                                                       attributes: [NSAttributedStringKey.foregroundColor : style.titleColor, NSAttributedStringKey.font: style.titleFont])
+                                                       attributes: [NSAttributedString.Key.foregroundColor : style.titleColor, NSAttributedString.Key.font: style.titleFont])
     }
     
     fileprivate func setupUI() {

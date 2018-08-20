@@ -183,9 +183,9 @@ public class AlertView: UIView {
             let titleParagraph = NSMutableParagraphStyle()
                 titleParagraph.alignment = .center
             
-            let attributedTitle = NSMutableAttributedString(string: title, attributes:[NSAttributedStringKey.font: style.titleFont])
-                attributedTitle.addAttribute(NSAttributedStringKey.foregroundColor, value: style.titleColor, range: NSRange(location:0, length: title.count))
-                attributedTitle.addAttributes([NSAttributedStringKey.paragraphStyle: titleParagraph], range: NSRange(location:0,length: title.count))
+            let attributedTitle = NSMutableAttributedString(string: title, attributes:[NSAttributedString.Key.font: style.titleFont])
+                attributedTitle.addAttribute(NSAttributedString.Key.foregroundColor, value: style.titleColor, range: NSRange(location:0, length: title.count))
+                attributedTitle.addAttributes([NSAttributedString.Key.paragraphStyle: titleParagraph], range: NSRange(location:0,length: title.count))
             lbTitle.attributedText = attributedTitle
         }
         
@@ -197,9 +197,9 @@ public class AlertView: UIView {
             paragraph.alignment = .center
         }
         
-        let attributedText = NSMutableAttributedString(string: text, attributes:[NSAttributedStringKey.font: style.textFont])
-            attributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: style.textColor, range: NSRange(location:0, length: text.count))
-            attributedText.addAttributes([NSAttributedStringKey.paragraphStyle: paragraph], range: NSRange(location:0,length: text.count))
+        let attributedText = NSMutableAttributedString(string: text, attributes:[NSAttributedString.Key.font: style.textFont])
+            attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: style.textColor, range: NSRange(location:0, length: text.count))
+            attributedText.addAttributes([NSAttributedString.Key.paragraphStyle: paragraph], range: NSRange(location:0,length: text.count))
         
         lbText.attributedText = attributedText
     }

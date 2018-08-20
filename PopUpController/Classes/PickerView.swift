@@ -28,7 +28,7 @@ public class PickerView: UIView {
     
     //MARK: - Object lifecycle
     init(title: String,
-         datePickerMode: UIDatePickerMode = .time,
+         datePickerMode: UIDatePicker.Mode = .time,
          style: PickerViewStyle,
          selectedDate: Date? = nil,
          startDate: Date? = nil,

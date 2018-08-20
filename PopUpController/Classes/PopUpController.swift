@@ -45,7 +45,7 @@ open class PopUpController: UIControl, UIGestureRecognizerDelegate, PropertyStor
         return ground
     }()
     
-    open let owner : UIWindow = UIApplication.shared.keyWindow!
+    public let owner : UIWindow = UIApplication.shared.keyWindow!
     
     fileprivate let popupView : UIView = {
         let view = UIView()

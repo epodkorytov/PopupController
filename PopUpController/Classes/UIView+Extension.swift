@@ -14,7 +14,7 @@ extension UIView {
         if let activity = viewWithTag(UIView.ACTIVITY_VIEW_CODE) as? UIActivityIndicatorView {
             activity.startAnimating()
         } else {
-            let activity = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            let activity = UIActivityIndicatorView(style: .gray)
             activity.hidesWhenStopped = true
             activity.startAnimating()
             activity.tag = UIButton.ACTIVITY_VIEW_CODE

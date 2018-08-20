@@ -7,10 +7,10 @@ import UIKit
 public class Constants {
     
     class func constraintFor(_ subview: UIView,
-                             attribute: NSLayoutAttribute,
+                             attribute: NSLayoutConstraint.Attribute,
                              value: CGFloat = 0.0,
                              toView: Any? = nil,
-                             attribute2: NSLayoutAttribute = .notAnAttribute,
+                             attribute2: NSLayoutConstraint.Attribute = .notAnAttribute,
                              active: Bool = true) -> NSLayoutConstraint
     {
         subview.translatesAutoresizingMaskIntoConstraints = false

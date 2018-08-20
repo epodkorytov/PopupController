@@ -229,8 +229,8 @@ public class SelectorView: UIView, UITableViewDelegate, UITableViewDataSource  {
             
             
             if let maxString = maxString {
-                let stringAttributes = [NSAttributedStringKey.foregroundColor : style.cellStyle.titleColor,
-                                        NSAttributedStringKey.font: style.cellStyle.titleFont] as [NSAttributedStringKey : Any]
+                let stringAttributes = [NSAttributedString.Key.foregroundColor : style.cellStyle.titleColor,
+                                        NSAttributedString.Key.font: style.cellStyle.titleFont] as [NSAttributedString.Key : Any]
                 
                 maxContentSizeWidth = NSAttributedString(string: maxString,
                                                          attributes: stringAttributes).size().width

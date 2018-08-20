@@ -8,7 +8,9 @@ import Foundation
 import Extensions
 
 public extension DataSource {
-    public convenience init(with range: Range<Int>, selectedValue: Int? = nil){
+    
+    
+    public convenience init(with range: Range<Int>, selectedValue: Int? = nil) {
         self.init()
         self.items = Array<T>()
         var selectedIds: [Int] = []

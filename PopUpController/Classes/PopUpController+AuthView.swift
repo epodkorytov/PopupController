@@ -9,12 +9,12 @@ extension PopUpController {
     
     private struct CustomProperties {
         static var authView: AuthView!
-        static var authViewStyle: AuthViewStyle! = AuthViewStyleDefault()
-        static var authViewContent: AuthViewContentProtocol! = AuthViewContentDefault()
+        static var authViewStyle: AuthViewStyle = AuthViewStyleDefault()
+        static var authViewContent: AuthViewContentProtocol = AuthViewContentDefault()
     }
     
     //
-    public var authViewStyle: AuthViewStyle! {
+    public var authViewStyle: AuthViewStyle {
         get {
             return getAssociatedObject(&CustomProperties.authViewStyle, defaultValue: CustomProperties.authViewStyle)
         }
@@ -24,7 +24,7 @@ extension PopUpController {
     }
     
     //
-    public var authViewContent: AuthViewContentProtocol! {
+    public var authViewContent: AuthViewContentProtocol {
         get {
             return getAssociatedObject(&CustomProperties.authViewContent, defaultValue: CustomProperties.authViewContent)
         }

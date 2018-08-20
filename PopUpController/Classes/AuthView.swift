@@ -625,7 +625,7 @@ public class AuthView: UIImageView, OCTextInputDelegate {
         transitionViewIfNeeded(registerButton, !hide, animated)
         
         animated = true
-        UIView.animate(withDuration: animated ? AuthView.ANIMATION_DURATION : 0.0, animations: {
+        UIView.animate(withDuration: animated ? AuthView.ANIMATION_DURATION : 0, animations: {
             self.layoutIfNeeded()
         }, completion: completion)
     }

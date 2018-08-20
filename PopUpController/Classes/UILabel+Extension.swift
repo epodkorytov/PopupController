@@ -26,7 +26,7 @@ extension UILabel {
         let style = NSMutableParagraphStyle()
         style.lineSpacing = spacing
         style.alignment = .center
-        attrString.addAttribute(NSAttributedStringKey.paragraphStyle, value: style,
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: style,
                                 range: NSRange(location: 0, length: stringValue.count))
         attributedText = attrString
     }

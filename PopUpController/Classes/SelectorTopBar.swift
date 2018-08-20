@@ -34,8 +34,8 @@ public class SelectorTopBar: UIView {
     }()
     //
     fileprivate let paragraphStyle = NSMutableParagraphStyle()
-    fileprivate var titleAttributes = [NSAttributedStringKey: Any]()
-    fileprivate var titleButtonAttributes = [NSAttributedStringKey: Any]()
+    fileprivate var titleAttributes = [NSAttributedString.Key: Any]()
+    fileprivate var titleButtonAttributes = [NSAttributedString.Key: Any]()
     //
     open var answerHandler: PopUpControllerAnswer!
     open var type: PopUpControllerSelectorType = .single {
@@ -140,7 +140,7 @@ public class SelectorTopBar: UIView {
     }
     //
     fileprivate func configureTitle() {
-        titleAttributes = [NSAttributedStringKey.foregroundColor : style.titleColor, NSAttributedStringKey.paragraphStyle: paragraphStyle, NSAttributedStringKey.font: style.titleFont]
+        titleAttributes = [NSAttributedString.Key.foregroundColor : style.titleColor, NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.font: style.titleFont]
         if let string = title {
             lbTitle.attributedText = NSAttributedString(string: string, attributes: titleAttributes)
         } else {
@@ -149,7 +149,7 @@ public class SelectorTopBar: UIView {
     }
     //
     fileprivate func configureButtonTitle(){
-        titleButtonAttributes = [NSAttributedStringKey.foregroundColor : style.titleButtonColor, NSAttributedStringKey.font: style.titleButtonFont]
+        titleButtonAttributes = [NSAttributedString.Key.foregroundColor : style.titleButtonColor, NSAttributedString.Key.font: style.titleButtonFont]
         if let btnAccept = btnAccept {
             let btnAcceptTitle = NSAttributedString(string: style.titleButton, attributes: titleButtonAttributes)
             btnAccept.setAttributedTitle(btnAcceptTitle, for: .normal)

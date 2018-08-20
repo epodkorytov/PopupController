@@ -36,7 +36,7 @@ public protocol SelectorViewStyle: PopUpControllerStyle {
     var topBarStyle: SelectorViewTopBarStyle { get set }
     
     //table settings
-    var separatorStyle: UITableViewCellSeparatorStyle { get set }
+    var separatorStyle: UITableViewCell.SeparatorStyle { get set }
     var separatorColor: UIColor { get set }
     var separatorInset: UIEdgeInsets { get set }
     var cellStyle: SelectorCellStyle { get set }
@@ -80,7 +80,7 @@ public struct SelectorViewStyleDefault: SelectorViewStyle {
     
     public var topBarStyle: SelectorViewTopBarStyle = SelectorViewTopBarStyleDefault()
     
-    public var separatorStyle: UITableViewCellSeparatorStyle = .singleLine
+    public var separatorStyle: UITableViewCell.SeparatorStyle = .singleLine
     public var separatorColor: UIColor = .red
     public var separatorInset: UIEdgeInsets = UIEdgeInsets.zero
     

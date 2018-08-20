@@ -9,11 +9,11 @@ import Extensions
 extension PopUpController {
     private struct AssociatedKeys {
         static var picker: UInt8 = 0
-        static var pickerViewStyle: PickerViewStyle! = PickerViewStyleDefault()
+        static var pickerViewStyle: PickerViewStyle = PickerViewStyleDefault()
     }
     
     //
-    public var pickerViewStyle: PickerViewStyle! {
+    public var pickerViewStyle: PickerViewStyle {
         get {
             return getAssociatedObject(&AssociatedKeys.pickerViewStyle, defaultValue: AssociatedKeys.pickerViewStyle)
         }

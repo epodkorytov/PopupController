@@ -16,11 +16,11 @@ public enum PopUpControllerSelectorType {
 extension PopUpController {
     private struct CustomProperties {
         static var selectorView: SelectorView!
-        static var selectorViewStyle: SelectorViewStyle! = SelectorViewStyleDefault()
+        static var selectorViewStyle: SelectorViewStyle = SelectorViewStyleDefault()
     }
     
     //
-    public var selectorViewStyle: SelectorViewStyle! {
+    public var selectorViewStyle: SelectorViewStyle {
         get {
             return getAssociatedObject(&CustomProperties.selectorViewStyle, defaultValue: CustomProperties.selectorViewStyle)
         }

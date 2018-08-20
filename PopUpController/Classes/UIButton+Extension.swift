@@ -59,14 +59,14 @@ public extension UIButton
     public var action: OCButtonAction? {
         set(newValue)
         {
-            removeTarget(self, action: #selector(performAction), for: UIControlEvents.touchUpInside)
+            removeTarget(self, action: #selector(performAction), for: UIControl.Event.touchUpInside)
             
             var wrapper: ActionWrapper?
             
             if let newValue = newValue
             {
                 wrapper = ActionWrapper(action: newValue)
-                addTarget(self, action: #selector(performAction), for: UIControlEvents.touchUpInside)
+                addTarget(self, action: #selector(performAction), for: UIControl.Event.touchUpInside)
             }
             
             objc_setAssociatedObject(self, &AssociatedKeys.ActionKey, wrapper, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -99,14 +99,14 @@ public extension UIButton
             if let newValue = newValue
             {
                 objc_setAssociatedObject(self, &AssociatedKeys.type, newValue as UIButtonTypeProtocol?, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                self.setTitle(newValue.title, for: UIControlState.normal)
+                self.setTitle(newValue.title, for: UIControl.State.normal)
             }
         }
     }
     
     //
     
-    func setBackgroundColor(color: UIColor, forState: UIControlState) {
+    func setBackgroundColor(color: UIColor, forState: UIControl.State) {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         UIGraphicsGetCurrentContext()!.setFillColor(color.cgColor)
         UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
@@ -138,11 +138,11 @@ public extension UIButton {
     }
     
     
-    public func setTitleUnderlined(_ title: String?, for state: UIControlState, style: ButtonStyleProtocol) {
+    public func setTitleUnderlined(_ title: String?, for state: UIControl.State, style: ButtonStyleProtocol) {
         if let titleStr = title {
-            let attrs = [ NSAttributedStringKey.font : style.textFont,
-                          NSAttributedStringKey.foregroundColor : style.textColor,
-                          NSAttributedStringKey.underlineStyle : 1] as [NSAttributedStringKey : Any]
+            let attrs = [ NSAttributedString.Key.font : style.textFont,
+                          NSAttributedString.Key.foregroundColor : style.textColor,
+                          NSAttributedString.Key.underlineStyle : 1] as [NSAttributedString.Key : Any]
             
             let attributedString = NSMutableAttributedString(string: "")
             let buttonTitleStr = NSMutableAttributedString(string:titleStr, attributes:attrs)

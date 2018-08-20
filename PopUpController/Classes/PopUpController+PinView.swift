@@ -12,12 +12,12 @@ extension PopUpController {
     
     private struct CustomProperties {
         static var pinView: PinView!
-        static var pinViewStyle: PinViewStyle! = PinViewStyleDefault()
-        static var pinViewContent: PinViewContentProtocol! = PinViewContentDefault()
+        static var pinViewStyle: PinViewStyle = PinViewStyleDefault()
+        static var pinViewContent: PinViewContentProtocol = PinViewContentDefault()
     }
     
     //
-    public var pinViewStyle: PinViewStyle! {
+    public var pinViewStyle: PinViewStyle {
         get {
             return getAssociatedObject(&CustomProperties.pinViewStyle, defaultValue: CustomProperties.pinViewStyle)
         }
@@ -27,7 +27,7 @@ extension PopUpController {
     }
     
     //
-    public var pinViewContent: PinViewContentProtocol! {
+    public var pinViewContent: PinViewContentProtocol {
         get {
             return getAssociatedObject(&CustomProperties.pinViewContent, defaultValue: CustomProperties.pinViewContent)
         }

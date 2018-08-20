@@ -145,7 +145,7 @@ public class PinView: UIView {
     }
     
     
-    private func stackView(withAxis axis: UILayoutConstraintAxis) -> UIStackView {
+    private func stackView(withAxis axis: NSLayoutConstraint.Axis) -> UIStackView {
         let result = UIStackView()
             result.alignment = .center
             result.distribution = .equalSpacing
@@ -161,9 +161,9 @@ public class PinView: UIView {
             paragraphStyle.lineSpacing = 0
         
         return NSMutableAttributedString(string: String(text),
-                                         attributes: [NSAttributedStringKey.font: font,
-                                                      NSAttributedStringKey.paragraphStyle: paragraphStyle,
-                                                      NSAttributedStringKey.foregroundColor: color])
+                                         attributes: [NSAttributedString.Key.font: font,
+                                                      NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                                                      NSAttributedString.Key.foregroundColor: color])
     }
     
     

@@ -24,11 +24,11 @@ extension PopUpController {
     //typealias T = ActivityIndicatorStyle
     
     private struct CustomProperties {
-        static var activityIndicatorStyle: ActivityIndicatorStyle! = ActivityIndicatorStyleDefault()
+        static var activityIndicatorStyle: ActivityIndicatorStyle = ActivityIndicatorStyleDefault()
         static var circularIndicator: Indicator?
     }
     
-    public var activityIndicatorStyle: ActivityIndicatorStyle! {
+    public var activityIndicatorStyle: ActivityIndicatorStyle {
         get {
             return getAssociatedObject(&CustomProperties.activityIndicatorStyle, defaultValue: CustomProperties.activityIndicatorStyle)
         }
@@ -70,7 +70,7 @@ extension PopUpController {
         self.style = activityIndicatorStyle
         switch type {
         case .slight:
-            let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+            let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
                 activityIndicator.color = activityIndicatorStyle.indicatorColor
                 activityIndicator.frame = CGRect(origin: CGPoint.zero, size: activityIndicatorStyle.popupBackgroundSize)
                 activityIndicator.startAnimating()
