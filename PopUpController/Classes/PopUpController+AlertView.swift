@@ -31,11 +31,11 @@ extension PopUpController {
     
     private struct CustomProperties {
         static var alertView: AlertView!
-        static var alertViewStyle: AlertViewStyle! = AlertViewStyleDefault()
+        static var alertViewStyle: AlertViewStyle = AlertViewStyleDefault()
     }
     
     //
-    public var alertViewStyle: AlertViewStyle! {
+    public var alertViewStyle: AlertViewStyle {
         get {
             return getAssociatedObject(&CustomProperties.alertViewStyle, defaultValue: CustomProperties.alertViewStyle)
         }
