@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B228AAC1FC435E800F777F8 /* ImageExtended.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B228AAB1FC435E800F777F8 /* ImageExtended.framework */; };
-		3B228AAD1FC435E800F777F8 /* ImageExtended.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B228AAB1FC435E800F777F8 /* ImageExtended.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B228AAE1FC4360500F777F8 /* ImageExtended.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B228AAB1FC435E800F777F8 /* ImageExtended.framework */; };
 		3B2B65CF200CF5280037152E /* PopUpController+Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2B65CE200CF5280037152E /* PopUpController+Picker.swift */; };
 		3B2B65D2200CFA330037152E /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2B65D1200CFA330037152E /* PickerView.swift */; };
@@ -16,8 +14,6 @@
 		3B2B65D8200E12850037152E /* ContentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2B65D7200E12850037152E /* ContentPickerView.swift */; };
 		3B2C1C3D1FBD8B93006F6F55 /* Indicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACF748F1FB5BACD0090EFF8 /* Indicator.framework */; };
 		3B2C1C3F1FBDB90B006F6F55 /* Extensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2C1C3E1FBDB90B006F6F55 /* Extensions.framework */; };
-		3B2C1C401FBDC962006F6F55 /* Extensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2C1C3E1FBDB90B006F6F55 /* Extensions.framework */; };
-		3B2C1C411FBDC962006F6F55 /* Extensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2C1C3E1FBDB90B006F6F55 /* Extensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B2C1C431FBDCDAB006F6F55 /* SelectorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C1C421FBDCDAB006F6F55 /* SelectorDataSource.swift */; };
 		3B6C04891FC2CB0A00FED973 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C04881FC2CB0A00FED973 /* SelectorCell.swift */; };
 		3B6C048F1FC433EC00FED973 /* CartFile in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C048E1FC433EB00FED973 /* CartFile */; };
@@ -49,6 +45,10 @@
 		3BA7F3C41F7CFCEB00B2E10F /* AlertViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7F3C31F7CFCEB00B2E10F /* AlertViewStyle.swift */; };
 		3BA7F3C61F7D034900B2E10F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7F3C51F7D034900B2E10F /* AlertView.swift */; };
 		3BC1EE291F7E76F300C298B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC1EE281F7E76F300C298B0 /* Assets.xcassets */; };
+		3BF393CE21538F3400F20219 /* Extensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2C1C3E1FBDB90B006F6F55 /* Extensions.framework */; };
+		3BF393CF21538F3400F20219 /* ImageExtended.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B228AAB1FC435E800F777F8 /* ImageExtended.framework */; };
+		3BF393D021538F3400F20219 /* Indicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACF748F1FB5BACD0090EFF8 /* Indicator.framework */; };
+		3BF393D121538F3400F20219 /* OCTextInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB6EC0D1FA3815500981E3A /* OCTextInput.framework */; };
 		DA67C6371FF2AA7900D851FE /* PinViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67C6361FF2AA7900D851FE /* PinViewContent.swift */; };
 		DA6BAF3E1FA9E080009E5002 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6BAF3D1FA9E080009E5002 /* UIView+Extension.swift */; };
 		DA6BAF421FAAFF5A009E5002 /* TextViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6BAF411FAAFF5A009E5002 /* TextViewStyle.swift */; };
@@ -58,14 +58,9 @@
 		DAB6EC0B1FA3730300981E3A /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB6EC0A1FA3730300981E3A /* LabelStyle.swift */; };
 		DAB6EC101FA704C800981E3A /* AuthViewTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB6EC0F1FA704C800981E3A /* AuthViewTransition.swift */; };
 		DAB6EC121FA7073500981E3A /* AuthViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB6EC111FA7073500981E3A /* AuthViewConstants.swift */; };
-		DAB6EC161FA70B4E00981E3A /* PopUpController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8131601F7BE0720075EC6B /* PopUpController.framework */; };
 		DAB6EC171FA70B4E00981E3A /* PopUpController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8131601F7BE0720075EC6B /* PopUpController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAB6EC1A1FA70BCA00981E3A /* OCTextInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB6EC0D1FA3815500981E3A /* OCTextInput.framework */; };
-		DAB6EC1D1FA70BFB00981E3A /* OCTextInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB6EC0D1FA3815500981E3A /* OCTextInput.framework */; };
-		DAB6EC1E1FA70BFB00981E3A /* OCTextInput.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAB6EC0D1FA3815500981E3A /* OCTextInput.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAB6EC201FA70D0300981E3A /* AuthViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB6EC1F1FA70D0300981E3A /* AuthViewContent.swift */; };
-		DACF74911FB5BADB0090EFF8 /* Indicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACF748F1FB5BACD0090EFF8 /* Indicator.framework */; };
-		DACF74921FB5BADB0090EFF8 /* Indicator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DACF748F1FB5BACD0090EFF8 /* Indicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,10 +80,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3B2C1C411FBDC962006F6F55 /* Extensions.framework in Embed Frameworks */,
-				DACF74921FB5BADB0090EFF8 /* Indicator.framework in Embed Frameworks */,
-				DAB6EC1E1FA70BFB00981E3A /* OCTextInput.framework in Embed Frameworks */,
-				3B228AAD1FC435E800F777F8 /* ImageExtended.framework in Embed Frameworks */,
 				DAB6EC171FA70B4E00981E3A /* PopUpController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -168,11 +159,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B2C1C401FBDC962006F6F55 /* Extensions.framework in Frameworks */,
-				DACF74911FB5BADB0090EFF8 /* Indicator.framework in Frameworks */,
-				DAB6EC1D1FA70BFB00981E3A /* OCTextInput.framework in Frameworks */,
-				3B228AAC1FC435E800F777F8 /* ImageExtended.framework in Frameworks */,
-				DAB6EC161FA70B4E00981E3A /* PopUpController.framework in Frameworks */,
+				3BF393CE21538F3400F20219 /* Extensions.framework in Frameworks */,
+				3BF393CF21538F3400F20219 /* ImageExtended.framework in Frameworks */,
+				3BF393D021538F3400F20219 /* Indicator.framework in Frameworks */,
+				3BF393D121538F3400F20219 /* OCTextInput.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,16 +334,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		3B81315D1F7BE0720075EC6B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		3B81315F1F7BE0720075EC6B /* PopUpController */ = {
 			isa = PBXNativeTarget;
@@ -361,7 +341,6 @@
 			buildPhases = (
 				3B81315B1F7BE0720075EC6B /* Sources */,
 				3B81315C1F7BE0720075EC6B /* Frameworks */,
-				3B81315D1F7BE0720075EC6B /* Headers */,
 				3B81315E1F7BE0720075EC6B /* Resources */,
 			);
 			buildRules = (
@@ -660,7 +639,7 @@
 		3B8131691F7BE0720075EC6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -676,7 +655,7 @@
 				INFOPLIST_FILE = PopUpController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TicketForEvent.PopUpController.Sample;
+				PRODUCT_BUNDLE_IDENTIFIER = Framework.PopUpController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -688,7 +667,7 @@
 		3B81316A1F7BE0720075EC6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -704,7 +683,7 @@
 				INFOPLIST_FILE = PopUpController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TicketForEvent.PopUpController.Sample;
+				PRODUCT_BUNDLE_IDENTIFIER = Framework.PopUpController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -718,14 +697,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YCCX64PW6;
+				DEVELOPMENT_TEAM = 82QZ2C759F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TicketForEvent.PopUpController;
+				PRODUCT_BUNDLE_IDENTIFIER = Framework.PopUpController.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -738,14 +717,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YCCX64PW6;
+				DEVELOPMENT_TEAM = 82QZ2C759F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TicketForEvent.PopUpController;
+				PRODUCT_BUNDLE_IDENTIFIER = Framework.PopUpController.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
