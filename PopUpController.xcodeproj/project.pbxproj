@@ -334,7 +334,6 @@
 				3B81315B1F7BE0720075EC6B /* Sources */,
 				3B81315C1F7BE0720075EC6B /* Frameworks */,
 				3B81315E1F7BE0720075EC6B /* Resources */,
-				3BFEE658215B8BF300D8BBFB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -426,34 +425,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3BFEE658215B8BF300D8BBFB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Indicator.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/OCTextInput.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Extensions.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ImageExtended.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Indicator.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Extensions.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ImageExtended.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/OCTextInput.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B81315B1F7BE0720075EC6B /* Sources */ = {
