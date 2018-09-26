@@ -14,7 +14,11 @@ public class SelectorCell: UITableViewCell {
                }
         }
 
-    fileprivate var style: SelectorCellStyle = SelectorCellStyleDefault()
+    var style: SelectorCellStyle? {
+        didSet {
+            tintColor = style?.tintColor
+        }
+    }
 
     //MARK: - Overriden methods
 
@@ -53,7 +57,7 @@ public class SelectorCell: UITableViewCell {
                 accessoryType = .none
             }
         } else if let item = content as? DataSourceItem<URL> {
-            imageView?.image = style.placeholder ?? UIImage()
+            imageView?.image = style?.placeholder ?? UIImage()
             if let url = item.value {
                 imageView?.image(stringOrURL: url,
                                  placeholderType: .activityIndicator(type: .infinit))
@@ -66,13 +70,13 @@ public class SelectorCell: UITableViewCell {
             }
         } else {
             if content.selected {
-                if let imageSelected = style.imageSelected {
+                if let imageSelected = style?.imageSelected {
                     imageView?.image = imageSelected
                 } else {
                     accessoryType = hideAccessory ? .none : .checkmark
                 }
             } else {
-                if let imageNormal = style.imageNornal {
+                if let imageNormal = style?.imageNornal {
                     imageView?.image = imageNormal
                 } else {
                     accessoryType = .none
@@ -80,7 +84,7 @@ public class SelectorCell: UITableViewCell {
             }
         }
         textLabel?.attributedText = NSAttributedString(string: content.title,
-                                                       attributes: [NSAttributedString.Key.foregroundColor : style.titleColor, NSAttributedString.Key.font: style.titleFont])
+                                                       attributes: [NSAttributedString.Key.foregroundColor : style!.titleColor, NSAttributedString.Key.font: style!.titleFont])
     }
     
     fileprivate func setupUI() {

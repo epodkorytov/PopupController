@@ -61,6 +61,8 @@ open class PopUpController: UIControl, UIGestureRecognizerDelegate, PropertyStor
         }
     }
     //
+    open var didHidePopup: PopUpControllerCompleteHandler?
+    //
     struct Static
     {
         static var instance: PopUpController?
@@ -210,7 +212,9 @@ open class PopUpController: UIControl, UIGestureRecognizerDelegate, PropertyStor
     }
     
     @objc fileprivate func didGroundTouch(sender: UITapGestureRecognizer? = nil) {
-        hide {}
+        hide {
+            self.didHidePopup?(UIButtonAnswerType.cancel, nil)
+        }
     }
     //
     fileprivate func clearPopup() {

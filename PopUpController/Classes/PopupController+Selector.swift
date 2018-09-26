@@ -16,13 +16,13 @@ public enum PopUpControllerSelectorType {
 extension PopUpController {
     private struct CustomProperties {
         static var selectorView: SelectorView!
-        static var selectorViewStyle: SelectorViewStyle = SelectorViewStyleDefault()
+        static var selectorViewStyle: SelectorViewStyle?
     }
     
     //
     public var selectorViewStyle: SelectorViewStyle {
         get {
-            return getAssociatedObject(&CustomProperties.selectorViewStyle, defaultValue: CustomProperties.selectorViewStyle)
+            return getAssociatedObject(&CustomProperties.selectorViewStyle, defaultValue: CustomProperties.selectorViewStyle) ?? SelectorViewStyleDefault()
         }
         set {
             return objc_setAssociatedObject(self, &CustomProperties.selectorViewStyle, newValue, .OBJC_ASSOCIATION_RETAIN)
@@ -46,6 +46,7 @@ extension PopUpController {
                                 mode: PopUpPresentMode = .centered,
                                 dataSource: DataSource<DataSourceBaseItem>,
                                 completeHandler: @escaping PopUpControllerCompleteHandler) {
+        
         let onComplete: PopUpControllerCompleteHandler = { type, answer in
             switch type {
                 case .accept:
@@ -54,13 +55,20 @@ extension PopUpController {
                     }
                     break
                 case .cancel:
-                    self.hide {}
+                    self.hide {
+                        completeHandler(type, answer)
+                    }
                     break
                 default :
                     break
             }
         }
-        self.style = selectorViewStyle
+        let selectedIds = dataSource.selectedIds
+        self.didHidePopup = { type, answer in
+            dataSource.selectedIds = selectedIds
+            onComplete(type, answer)
+        }
+        self.style = selectorViewStyle as PopUpControllerStyle
         selectorView = SelectorView(dataSource: dataSource,
                                       presentationMode: mode,
                                       style: selectorViewStyle,

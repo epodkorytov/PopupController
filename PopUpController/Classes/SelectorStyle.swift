@@ -22,6 +22,7 @@ public protocol SelectorViewTopBarStyle: PopUpControllerStyle {
 public protocol SelectorCellStyle {
     var titleFont: UIFont { get set }
     var titleColor: UIColor { get set }
+    var tintColor: UIColor { get set }
     
     var imageNornal: UIImage? { get set }
     var imageSelected: UIImage? { get set }
@@ -60,6 +61,8 @@ public struct SelectorViewTopBarStyleDefault: SelectorViewTopBarStyle {
 }
 
 public struct SelectorCellStyleDefault: SelectorCellStyle {
+    public var tintColor: UIColor = .black
+    
     public var titleFont: UIFont  = UIFont.systemFont(ofSize: 16)
     public var titleColor: UIColor = .black
     

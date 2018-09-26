@@ -105,6 +105,51 @@ class ViewController: UIViewController {
     let item3 = DataSourceItem<T>(id: 3, title: "Title3", selected: false)
     
     
+    public struct SelectorViewTopBarStyleDefault: SelectorViewTopBarStyle {
+        public var popupBackgroundColor = UIColor.white
+        public var cornerRadius: CGFloat = 5.0
+        public var backgroundColor: UIColor = "#FA6821".ifColor ?? .orange
+        
+        public var titleFont: UIFont  = UIFont.boldSystemFont(ofSize: 16)
+        public var titleColor: UIColor = .white
+        
+        public var titleButtonFont: UIFont  = UIFont.systemFont(ofSize: 14)
+        public var titleButtonColor: UIColor = .white
+        public var titleButton: String = "Done"
+        public var topBarHieght: CGFloat = 44.0
+        
+        public init() { }
+    }
+    
+    public struct SelectorCellStyleDefault: SelectorCellStyle {
+        public var tintColor: UIColor = .orange
+        
+        public var titleFont: UIFont  = UIFont.systemFont(ofSize: 16)
+        public var titleColor: UIColor = "4A4A4A".ifColor ?? .blue
+        
+        public var imageNornal: UIImage? = nil
+        public var imageSelected: UIImage? = nil
+        public var placeholder: UIImage? = nil
+    }
+    
+    public struct AppSelectorViewStyleDefault: SelectorViewStyle {
+        public var cellStyle: SelectorCellStyle = SelectorCellStyleDefault()
+        public var backgroundColor = UIColor(white: 0.1, alpha: 0.3)
+        public var popupBackgroundColor = UIColor.white
+        public var cornerRadius: CGFloat = 5.0
+        
+        public var width: CGFloat = 300.0
+        public var minHieght: CGFloat = 2*44.0
+        public var maxHieght: CGFloat = 380.0
+        
+        public var topBarStyle: SelectorViewTopBarStyle = SelectorViewTopBarStyleDefault()
+        
+        public var separatorStyle: UITableViewCell.SeparatorStyle = .none
+        public var separatorColor: UIColor = "4A4A4A".ifColor ?? .blue
+        public var separatorInset: UIEdgeInsets = UIEdgeInsets.zero
+        
+    }
+    
     @IBAction func btnSelectorTap() {
         
         item0.value = URL(string: "http://static.sugardaddyme.info/img/zodiacs/aquarius.png")//.red
@@ -116,21 +161,20 @@ class ViewController: UIViewController {
         let dataSource: DataSource<DataSourceBaseItem> = DataSource(items: items)
         
         //presentPicker
-        PopUpController.sharedInstance.presentPicker(title: "Select Item", dataSource: dataSource) { answer, object in
-            dump(object)
-        }
+//        PopUpController.sharedInstance.presentPicker(title: "Select Item", dataSource: dataSource) { answer, object in
+//            dump(object)
+//        }
         //presentSelector
-        /*
-        PopUpController.sharedInstance.presentSelector(title: "Select Item",
-                                                       type: .single,
+        let popup = PopUpController.sharedInstance
+        
+        popup.selectorViewStyle = AppSelectorViewStyleDefault()
+        popup.presentSelector(title: "Select Item",
+                                                       type: .multiple,
                                                        dataSource: dataSource) { (answer, obj) in
              print(obj ?? "Empty")
-                                                        if let ids = obj as? Array<Int>{
-                                                            //dataSource.selectedIds = ids
-                                                        }
                                                         
         }
- */
+ 
     }
     
     

@@ -195,6 +195,7 @@ public class SelectorView: UIView, UITableViewDelegate, UITableViewDataSource  {
         let item = dataSource.items[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(SelectorCell.self)
+            cell?.style = style.cellStyle
             cell?.content = item
         
         return cell!
